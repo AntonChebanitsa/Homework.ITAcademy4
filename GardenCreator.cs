@@ -4,11 +4,11 @@ using System.Xml.Serialization;
 
 namespace Homework.ITAcademy4
 {
-    public class GardenCreator
+    public static class GardenCreator
     {
-        public int[,] Garden { get; private set; }
+        public static int[,] Garden { get; private set; }
 
-        public void Create()
+        public static void Create()
         {
             Console.WriteLine($"Create a garden with size: ");
             var x = Convert.ToInt32(Console.ReadLine());
@@ -18,9 +18,10 @@ namespace Homework.ITAcademy4
             Draw();
         }
         
-        public void Draw()
+        public static void Draw()
         {
             var upper = Garden.GetUpperBound(0)+1;
+
             for (var i = 0; i < Garden.Length; i++)
             {
                 if (i%upper==0)
@@ -29,7 +30,6 @@ namespace Homework.ITAcademy4
                 }
                 Console.Write("*");
             }
-            
         }
     }
 }

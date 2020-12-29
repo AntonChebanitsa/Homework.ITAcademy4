@@ -6,8 +6,7 @@ namespace Homework.ITAcademy4
     {
         static void Main(string[] args)
         {
-           GardenCreator gardenCreator= new GardenCreator();
-           gardenCreator.Create();
+            GardenCreator.Create();
 
            
         }
