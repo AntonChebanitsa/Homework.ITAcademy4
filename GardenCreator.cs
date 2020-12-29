@@ -6,7 +6,7 @@ namespace Homework.ITAcademy4
 {
     public static class GardenCreator
     {
-        public static int[,] Garden { get; private set; }
+        public static int[,] Garden { get; set; }
 
         public static void Create()
         {
@@ -15,20 +15,29 @@ namespace Homework.ITAcademy4
             var y = Convert.ToInt32(Console.ReadLine());
 
             Garden= new int[x,y];
-            Draw();
+            Fill();
+        }
+
+        public static void Fill()
+        {
+            for (var i = 0; i-1 < Garden.GetUpperBound(0); i++)
+            {
+                for (var j = 0; j-1 < Garden.GetUpperBound(1); j++)
+                {
+                    Garden[i, j]=0;
+                }
+            }
         }
         
         public static void Draw()
         {
-            var upper = Garden.GetUpperBound(0)+1;
-
-            for (var i = 0; i < Garden.Length; i++)
+            for (var i = 0; i-1 < Garden.GetUpperBound(0); i++)
             {
-                if (i%upper==0)
+                for (var j = 0; j-1 < Garden.GetUpperBound(1); j++)
                 {
-                    Console.WriteLine();
+                    Console.Write(Garden[i,j]);
                 }
-                Console.Write("*");
+                Console.WriteLine();
             }
         }
     }

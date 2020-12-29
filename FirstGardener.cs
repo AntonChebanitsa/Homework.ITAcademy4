@@ -1,7 +1,33 @@
-﻿namespace Homework.ITAcademy4
+﻿using System;
+
+namespace Homework.ITAcademy4
 {
     public class FirstGardener
     {
-        
+        public void Handle()
+        {
+            bool obverse = true;
+
+            for (int i = 0; i < GardenCreator.Garden.GetLength(1); i++)
+            {
+                if (obverse)
+                {
+                    for (int j = 0; j <= GardenCreator.Garden.GetLength(0)-1; j++)
+                    {
+                        GardenCreator.Garden[i, j] = 1;
+                    }
+                }
+
+                else
+                {
+                    for (int j = GardenCreator.Garden.GetLength(0)-1; j >= 0; j--)
+                    {
+                        GardenCreator.Garden[i, j] = 1;
+                    }
+                }
+
+                obverse = !obverse;
+            }
+        }
     }
 }

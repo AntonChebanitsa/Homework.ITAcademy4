@@ -7,8 +7,15 @@ namespace Homework.ITAcademy4
         static void Main(string[] args)
         {
             GardenCreator.Create();
+            GardenCreator.Draw();
 
-           
+            Console.Write("\nPress Enter to handle");
+            Console.ReadLine();
+
+            var fg=new FirstGardener();
+            fg.Handle();
+
+            GardenCreator.Draw();
         }
     }
 }
