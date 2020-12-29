@@ -4,7 +4,7 @@ namespace Homework.ITAcademy4
 {
     public class SecondGardener
     {
-        public void Handle()
+        public async void  Handle()
         {
             var obverse = true;
 
@@ -14,7 +14,14 @@ namespace Homework.ITAcademy4
                 {
                     for (var j = GardenCreator.Garden.GetUpperBound(0) ; j >= 0; j--)
                     {
-                        GardenCreator.Garden[i, j] = 1;
+                        if (GardenCreator.Garden[i, j] == 0)
+                        {
+                            GardenCreator.Garden[i, j] = 1;
+                        }
+                        else if (GardenCreator.Garden[i, j] == 5)
+                        {
+                            continue;
+                        }
                     }
                 }
 
@@ -22,7 +29,14 @@ namespace Homework.ITAcademy4
                 {
                     for (var j = 0; j <= GardenCreator.Garden.GetUpperBound(0); j++)
                     {
-                        GardenCreator.Garden[i, j] = 1;
+                        if (GardenCreator.Garden[i, j] == 0)
+                        {
+                            GardenCreator.Garden[i, j] = 1;
+                        }
+                        else if (GardenCreator.Garden[i, j] == 5)
+                        {
+                            continue;
+                        }
                     }
                 }
 
