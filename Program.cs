@@ -4,16 +4,18 @@ namespace Homework.ITAcademy4
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             GardenCreator.Create();
-            GardenCreator.Draw();
 
             Console.Write("\nPress Enter to handle");
             Console.ReadLine();
 
-            var fg=new FirstGardener();
+            var fg = new FirstGardener();
             fg.Handle();
+
+            var sg = new SecondGardener();
+            sg.Handle();
 
             GardenCreator.Draw();
         }

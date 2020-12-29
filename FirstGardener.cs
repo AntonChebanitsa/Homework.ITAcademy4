@@ -6,13 +6,13 @@ namespace Homework.ITAcademy4
     {
         public void Handle()
         {
-            bool obverse = true;
-
-            for (int i = 0; i < GardenCreator.Garden.GetLength(1); i++)
+            var obverse = true;
+            
+            for (var i = 0; i <= GardenCreator.Garden.GetUpperBound(1); i++)
             {
                 if (obverse)
                 {
-                    for (int j = 0; j <= GardenCreator.Garden.GetLength(0)-1; j++)
+                    for (var j = 0; j <= GardenCreator.Garden.GetUpperBound(0); j++)
                     {
                         GardenCreator.Garden[i, j] = 1;
                     }
@@ -20,7 +20,7 @@ namespace Homework.ITAcademy4
 
                 else
                 {
-                    for (int j = GardenCreator.Garden.GetLength(0)-1; j >= 0; j--)
+                    for (var j = GardenCreator.Garden.GetUpperBound(0); j >= 0; j--)
                     {
                         GardenCreator.Garden[i, j] = 1;
                     }

@@ -20,13 +20,14 @@ namespace Homework.ITAcademy4
 
         public static void Fill()
         {
-            for (var i = 0; i-1 < Garden.GetUpperBound(0); i++)
+            for (var i = 0; i < Garden.GetUpperBound(0); i++)
             {
-                for (var j = 0; j-1 < Garden.GetUpperBound(1); j++)
+                for (var j = 0; j < Garden.GetUpperBound(1); j++)
                 {
                     Garden[i, j]=0;
                 }
             }
+            Draw();
         }
         
         public static void Draw()
